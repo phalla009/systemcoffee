@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="Image/posicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zee coffee shop-home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #d1c7be;
+      }
+      .navbar {
+        display: flex;
+        padding: 10px;
+        background: #5c5248;
+        color: white;
+        text-align: center;
+      }
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin-left: 300px;
+      }
+      .nav-links a:hover {
+        color: aqua;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+        background: #7c7168;
+        color: white;
+      }
+      .hero-content {
+        max-width: 500px;
+        height: 68vh;
+        align-items: center;
+      }
+      .hero-content h1 {
+        font-size: 50px;
+      }
+      .btn {
+        display: inline-block;
+        background: #8b7355;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
+      #btn :hover {
+        color: aqua;
+      }
+      .hero-image img {
+        width: 400px;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        padding: 5px;
+        background: #5c5248;
+        color: white;
+      }
+      .logo {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      span {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Coffee Shop</div>
+        <ul class="nav-links">
+          <li>
+            <a href="#"><i class="home"></i> Home</a>
+          </li>
+          <li>
+            <a href="mian.html"><i class="menu"></i> Menu</a>
+          </li>
+          <li>
+            <a href="#"><i class="oder"></i> My Orders</a>
+          </li>
+          <li>
+            <a href="#"><i class="Report"></i> Report</a>
+          </li>
+          <li>
+            <a href="#"><i class="stock"></i> Stock</a>
+          </li>
+          <li>
+            <a href="#" class="settings"><i class="setting"></i> Settings</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to <br />ZEE<span>&nbsp;COFFEE</span></h1>
+        <p class="subtitle">The best coffee</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#" class="btn" id="btn">Learn More</a>
+      </div>
+      <div class="hero-image">
+        <img src="Image/download (1).jpg" alt="Coffee Cups" />
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 H'9 Coffee</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Wait for the DOM to load
+        let settingsButton = document.querySelector(".settings");
+
+        if (settingsButton) {
+          settingsButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Stop the default behavior of the link
+
+            // Show confirmation alert
+            let choice = confirm("Do you want to Log In Again?");
+
+            if (choice) {
+              window.location.href = "login.html"; // Update with actual login page
+            } else {
+              window.location.href = "home.html"; // Update with actual signout page
+            }
+          });
+        } else {
+          console.error("Settings button not found!");
+        }
+      });
+    </script>
+  </body>
+</html>
